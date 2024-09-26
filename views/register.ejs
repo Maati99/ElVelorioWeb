@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL Velorio Web</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav center">
+        <a href="/"><button class="navSpace navSpace2">Inicio</button></a>
+        <a href="/biblioteca"><button class="navSpace navSpace2">Biblioteca</button></a>
+        <a href="/chat"><button class="navSpace navSpace2">Chat</button></a>
+        <button class="navSpace navSpace2" style="color: white;">Resgistro</button>
+    </nav>
+
+    <% if (failed) {%>
+        <h4 style="color: white;"><%= msg %></h4>
+
+    <% } %>
+
+    <form action="/auth/register" method="post" class="containerForm">
+        <div class="containerForm">
+          <label for="username"><b>Nombre de usuario</b></label>
+          <input type="text" placeholder="Nombre de usuario" id="username" name="username" autocomplete="username" autofocus required>
+      
+          <label for="password"><b>Contraseña</b></label>
+          <input type="password" placeholder="Contraseña" id="password" name="password" autocomplete="current-password" required>
+      
+          <button type="submit" href="">Resgistrate</button>
+        </div>
+    </form>
+
+</body>
+
+<script type="text/html" src="../index.js"></script>
+</html>
